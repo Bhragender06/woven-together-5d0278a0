@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "@/assets/medileaf-logo.png.asset.json";
+import mark from "@/assets/medileaf-mark.png.asset.json";
 
 /** Short first-load screen: particles + kinetic text, then fades out. Shown once per browser session. */
 export function AppLoader() {
@@ -46,7 +46,7 @@ export function AppLoader() {
     <div aria-live="polite" role="status" className={`loader-screen ${phase === "out" ? "loader-out" : ""}`}>
       <canvas ref={canvas} className="absolute inset-0" aria-hidden />
       <div className="relative flex flex-col items-center gap-5">
-        <img src={logo.url} alt="" className="loader-logo h-20 w-20" />
+        <img src={mark.url} alt="" className="loader-logo h-24 w-24" />
         <div className="font-display text-5xl tracking-[0.3em] text-foreground">
           {"MEDILEAF".split("").map((ch, i) => <span key={i} className="kinetic-char" style={{ animationDelay: `${i * 60}ms` }}>{ch}</span>)}
         </div>
