@@ -1,0 +1,14 @@
+# Roadmap
+- [x] Medileaf branding + first-load loader (particles, kinetic text, reduced motion)
+- [x] Back button on every page
+- [x] Settings → push notifications (permission + test)
+- [x] Profile → profile photo
+- [x] Real accounts synced across devices (email + Google)
+- [x] AI text extraction from prescription uploads
+- [x] Remove medicines no longer taken from the daily plan, keeping history
+- [x] Admin panel: orders, users (suspend), overview, prescription uploads, refill alerts
+- [x] Eco rewards: wrapper/expired-med returns, 50-item seed counter, admin parcel checks + seed orders
+- [x] AI Safety Shield: drug/food/duplicate interaction check on upload, add medicine and Today page
+- [x] Snap & Count AI photo counting on Rewards return form
+- [x] Voice assistant (English/Hindi mic helper)
+- [x] Explain like I'm 10 translator (/explain + medicine page)
