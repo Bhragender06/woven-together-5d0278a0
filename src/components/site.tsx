@@ -1,5 +1,5 @@
 import { Link, useNavigate, useRouter } from "@tanstack/react-router";
-import logo from "@/assets/medileaf-logo.png.asset.json";
+import mark from "@/assets/medileaf-mark.png.asset.json";
 import { useEffect, useState, type ReactNode } from "react";
 import { getState, useStore } from "@/lib/store";
 import { cloudSignOut, useAuthReady } from "@/lib/cloud";
@@ -10,7 +10,7 @@ import { Toaster } from "@/components/ui/sonner";
 export function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2 text-primary">
-      <img src={logo.url} alt="" className="h-9 w-9" />
+      <img src={mark.url} alt="Medileaf logo" className="h-9 w-9" />
       <span className="font-display text-2xl text-foreground">Medileaf</span>
     </Link>
   );

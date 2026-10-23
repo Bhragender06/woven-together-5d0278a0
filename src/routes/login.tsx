@@ -4,6 +4,7 @@ import { BackButton, Field, Logo } from "@/components/site";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { getState } from "@/lib/store";
+import logo from "@/assets/medileaf-logo.png.asset.json";
 
 export const Route = createFileRoute("/login")({
   head: () => ({
@@ -69,7 +70,7 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
   return (
     <div className="grid min-h-screen md:grid-cols-2">
       <div className="hidden flex-col justify-between bg-primary p-12 text-primary-foreground md:flex">
-        <span className="font-display text-2xl">Medileaf</span>
+        <img src={logo.url} alt="Medileaf — Rooted in Care, Driven by Science" className="h-48 w-auto" />
         <p className="font-display text-5xl leading-tight">“Finally, I know exactly what to take and when.”</p>
         <span className="opacity-70">Calm medication management</span>
       </div>
