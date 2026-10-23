@@ -4,6 +4,8 @@ import { useEffect, useState, type ReactNode } from "react";
 import { getState, useStore } from "@/lib/store";
 import { cloudSignOut, useAuthReady } from "@/lib/cloud";
 import { useIsAdmin } from "@/lib/use-admin";
+import { DemoBar } from "@/components/demo-bar";
+import { Toaster } from "@/components/ui/sonner";
 
 export function Logo() {
   return (
@@ -63,7 +65,9 @@ export function AppShell({ children }: { children: ReactNode }) {
   if (!ready || !user) return <div className="grid min-h-screen place-items-center text-muted-foreground">Loading…</div>;
   return (
     <div className="min-h-screen">
+      <Toaster richColors position="top-center" />
       <header className="border-b bg-background/90 backdrop-blur sticky top-0 z-20">
+        <DemoBar />
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4">
           <Logo />
           <nav aria-label="Main" className="flex flex-wrap gap-1">
