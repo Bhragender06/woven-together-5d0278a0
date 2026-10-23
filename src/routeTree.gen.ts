@@ -10,33 +10,232 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as ExplainRouteImport } from './routes/explain'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as RefillsRouteImport } from './routes/refills'
+import { Route as RemindersRouteImport } from './routes/reminders'
+import { Route as RewardsRouteImport } from './routes/rewards'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as UploadRouteImport } from './routes/upload'
+import { Route as MedicationsIdRouteImport } from './routes/medications.$id'
+import { Route as MedicationsNewRouteImport } from './routes/medications.new'
+import { Route as ReorderIdRouteImport } from './routes/reorder.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExplainRoute = ExplainRouteImport.update({
+  id: '/explain',
+  path: '/explain',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefillsRoute = RefillsRouteImport.update({
+  id: '/refills',
+  path: '/refills',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RemindersRoute = RemindersRouteImport.update({
+  id: '/reminders',
+  path: '/reminders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RewardsRoute = RewardsRouteImport.update({
+  id: '/rewards',
+  path: '/rewards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UploadRoute = UploadRouteImport.update({
+  id: '/upload',
+  path: '/upload',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MedicationsIdRoute = MedicationsIdRouteImport.update({
+  id: '/medications/$id',
+  path: '/medications/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MedicationsNewRoute = MedicationsNewRouteImport.update({
+  id: '/medications/new',
+  path: '/medications/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReorderIdRoute = ReorderIdRouteImport.update({
+  id: '/reorder/$id',
+  path: '/reorder/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/dashboard': typeof DashboardRoute
+  '/explain': typeof ExplainRoute
+  '/login': typeof LoginRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/refills': typeof RefillsRoute
+  '/reminders': typeof RemindersRoute
+  '/rewards': typeof RewardsRoute
+  '/settings': typeof SettingsRoute
+  '/signup': typeof SignupRoute
+  '/upload': typeof UploadRoute
+  '/medications/$id': typeof MedicationsIdRoute
+  '/medications/new': typeof MedicationsNewRoute
+  '/reorder/$id': typeof ReorderIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/dashboard': typeof DashboardRoute
+  '/explain': typeof ExplainRoute
+  '/login': typeof LoginRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/refills': typeof RefillsRoute
+  '/reminders': typeof RemindersRoute
+  '/rewards': typeof RewardsRoute
+  '/settings': typeof SettingsRoute
+  '/signup': typeof SignupRoute
+  '/upload': typeof UploadRoute
+  '/medications/$id': typeof MedicationsIdRoute
+  '/medications/new': typeof MedicationsNewRoute
+  '/reorder/$id': typeof ReorderIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/dashboard': typeof DashboardRoute
+  '/explain': typeof ExplainRoute
+  '/login': typeof LoginRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/refills': typeof RefillsRoute
+  '/reminders': typeof RemindersRoute
+  '/rewards': typeof RewardsRoute
+  '/settings': typeof SettingsRoute
+  '/signup': typeof SignupRoute
+  '/upload': typeof UploadRoute
+  '/medications/$id': typeof MedicationsIdRoute
+  '/medications/new': typeof MedicationsNewRoute
+  '/reorder/$id': typeof ReorderIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/dashboard'
+    | '/explain'
+    | '/login'
+    | '/onboarding'
+    | '/profile'
+    | '/refills'
+    | '/reminders'
+    | '/rewards'
+    | '/settings'
+    | '/signup'
+    | '/upload'
+    | '/medications/$id'
+    | '/medications/new'
+    | '/reorder/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/admin'
+    | '/dashboard'
+    | '/explain'
+    | '/login'
+    | '/onboarding'
+    | '/profile'
+    | '/refills'
+    | '/reminders'
+    | '/rewards'
+    | '/settings'
+    | '/signup'
+    | '/upload'
+    | '/medications/$id'
+    | '/medications/new'
+    | '/reorder/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/dashboard'
+    | '/explain'
+    | '/login'
+    | '/onboarding'
+    | '/profile'
+    | '/refills'
+    | '/reminders'
+    | '/rewards'
+    | '/settings'
+    | '/signup'
+    | '/upload'
+    | '/medications/$id'
+    | '/medications/new'
+    | '/reorder/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
+  DashboardRoute: typeof DashboardRoute
+  ExplainRoute: typeof ExplainRoute
+  LoginRoute: typeof LoginRoute
+  OnboardingRoute: typeof OnboardingRoute
+  ProfileRoute: typeof ProfileRoute
+  RefillsRoute: typeof RefillsRoute
+  RemindersRoute: typeof RemindersRoute
+  RewardsRoute: typeof RewardsRoute
+  SettingsRoute: typeof SettingsRoute
+  SignupRoute: typeof SignupRoute
+  UploadRoute: typeof UploadRoute
+  MedicationsIdRoute: typeof MedicationsIdRoute
+  MedicationsNewRoute: typeof MedicationsNewRoute
+  ReorderIdRoute: typeof ReorderIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +247,131 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explain': {
+      id: '/explain'
+      path: '/explain'
+      fullPath: '/explain'
+      preLoaderRoute: typeof ExplainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refills': {
+      id: '/refills'
+      path: '/refills'
+      fullPath: '/refills'
+      preLoaderRoute: typeof RefillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reminders': {
+      id: '/reminders'
+      path: '/reminders'
+      fullPath: '/reminders'
+      preLoaderRoute: typeof RemindersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rewards': {
+      id: '/rewards'
+      path: '/rewards'
+      fullPath: '/rewards'
+      preLoaderRoute: typeof RewardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upload': {
+      id: '/upload'
+      path: '/upload'
+      fullPath: '/upload'
+      preLoaderRoute: typeof UploadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/medications/$id': {
+      id: '/medications/$id'
+      path: '/medications/$id'
+      fullPath: '/medications/$id'
+      preLoaderRoute: typeof MedicationsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/medications/new': {
+      id: '/medications/new'
+      path: '/medications/new'
+      fullPath: '/medications/new'
+      preLoaderRoute: typeof MedicationsNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reorder/$id': {
+      id: '/reorder/$id'
+      path: '/reorder/$id'
+      fullPath: '/reorder/$id'
+      preLoaderRoute: typeof ReorderIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
+  DashboardRoute: DashboardRoute,
+  ExplainRoute: ExplainRoute,
+  LoginRoute: LoginRoute,
+  OnboardingRoute: OnboardingRoute,
+  ProfileRoute: ProfileRoute,
+  RefillsRoute: RefillsRoute,
+  RemindersRoute: RemindersRoute,
+  RewardsRoute: RewardsRoute,
+  SettingsRoute: SettingsRoute,
+  SignupRoute: SignupRoute,
+  UploadRoute: UploadRoute,
+  MedicationsIdRoute: MedicationsIdRoute,
+  MedicationsNewRoute: MedicationsNewRoute,
+  ReorderIdRoute: ReorderIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
