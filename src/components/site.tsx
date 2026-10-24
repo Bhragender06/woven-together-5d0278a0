@@ -63,11 +63,12 @@ export function AppShell({ children }: { children: ReactNode }) {
     else setReady(true);
   }, [navigate, user, authReady]);
   if (!ready || !user) return <div className="grid min-h-screen place-items-center text-muted-foreground">Loading…</div>;
+  const showDemo = user.email.toLowerCase() === "singhbhragenderk@gmail.com";
   return (
     <div className="min-h-screen">
       <Toaster richColors position="top-center" />
       <header className="border-b bg-background/90 backdrop-blur sticky top-0 z-20">
-        <DemoBar />
+        {showDemo && <DemoBar />}
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4">
           <Logo />
           <nav aria-label="Main" className="flex flex-wrap gap-1">
